@@ -13,6 +13,8 @@ RUBY_VERSION="1.9.3-p392"
 JRUBY_VERSION="1.7.3"
 RUBINIUS_VERSION="2.0.0-rc1"
 
+MAKE=${MAKE:-make}
+
 [[ -z "$PREFIX"      ]] && export PREFIX="/usr/local"
 [[ -z "$SRC_DIR"     ]] && export SRC_DIR="/usr/local/src"
 [[ -z "$RUBIES_DIR"  ]] && export RUBIES_DIR="/opt/rubies"
@@ -58,7 +60,7 @@ fi
 # Install chruby
 #
 log "Installing chruby ..."
-make install
+$MAKE install
 
 #
 # Pre Install
